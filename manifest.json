@@ -4,7 +4,8 @@
   "version": "1.0",
   "description": "For those that prefer a spreadsheet to keep track of their job search, this extension will automatically log job application submissions!",
   "background": {
-    "service_worker": "service-worker.js"
+    "service_worker": "service-worker.js",
+    "type": "module"
   },
   "action": {
     "default_title": "Job Application Logger",

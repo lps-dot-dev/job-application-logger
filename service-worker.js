@@ -1,4 +1,4 @@
-const VALID_COMMANDS = { OPEN_SIDE_PANEL: "open_side_panel" };
+import { isCommandSupported, SUPPORTED_COMMANDS } from "./src/commands.js";
 
 // This will prevent the side panel from opening when clicking the action toolbar icon
 chrome.sidePanel
@@ -6,12 +6,12 @@ chrome.sidePanel
   .catch((error) => console.error(error));
 
 chrome.commands.onCommand.addListener((command) => {
-  if (Object.values(VALID_COMMANDS).includes(command) === false) {
+  if (isCommandSupported(command) === false) {
     return;
   }
 
   switch (command) {
-    case VALID_COMMANDS.OPEN_SIDE_PANEL:
+    case SUPPORTED_COMMANDS.OPEN_SIDE_PANEL:
       chrome.tabs.query(
         {
           active: true,
