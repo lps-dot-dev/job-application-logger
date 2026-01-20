@@ -1,0 +1,34 @@
+{
+  "manifest_version": 3,
+  "name": "Job Application Logger",
+  "version": "1.0",
+  "description": "For those that prefer a spreadsheet to keep track of their job search, this extension will automatically log job application submissions!",
+  "background": {
+    "service_worker": "service-worker.js"
+  },
+  "action": {
+    "default_title": "Job Application Logger",
+    "default_popup": "popup.html"
+  },
+  "permissions": ["sidePanel", "tabs"],
+  "side_panel": {
+    "default_path": "side-panel.html"
+  },
+  "commands": {
+    "open_side_panel": {
+      "suggested_key": {
+        "default": "Ctrl+B",
+        "mac": "Command+B"
+      },
+      "description": "Toggle the extension side panel"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "19": "icons/icon19.png",
+    "32": "icons/icon32.png",
+    "38": "icons/icon38.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}
