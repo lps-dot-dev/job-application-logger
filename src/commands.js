@@ -1,4 +1,7 @@
-export const SUPPORTED_COMMANDS = { OPEN_SIDE_PANEL: "open_side_panel" };
+export const SUPPORTED_COMMANDS = {
+  LOG_JOB_INFO: "log_job_information",
+  OPEN_SIDE_PANEL: "open_side_panel",
+};
 
 /**
  * @param {String} command Name of the command being evaluated
