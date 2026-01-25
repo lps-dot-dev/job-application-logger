@@ -1,11 +1,11 @@
-import { isCommandSupported, SUPPORTED_COMMANDS } from "./src/commands.js";
+import { isCommandSupported, SUPPORTED_COMMANDS } from "../utils/commands.js";
 import {
   JOB_FIELD_SELECTION_OPTIONS,
   JOB_LINK_OPTIONS,
   getJobFieldSessionIds,
   isSupportedContextMenu,
-} from "./src/context-menu.js";
-import { getCurrentTab } from "./src/tabs.js";
+} from "../utils/context-menu.js";
+import { getCurrentTab } from "../utils/tabs.js";
 
 chrome.runtime.onInstalled.addListener(() => {
   for (let [jobFieldId, optionLabel] of Object.entries(
