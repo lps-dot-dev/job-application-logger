@@ -6,13 +6,17 @@ export default defineManifest({
   version: "1.0",
   description:
     "For those that prefer a spreadsheet to keep track of their job search, this extension will automatically log job application submissions!",
+  action: {
+    default_title: "Job Application Logger",
+    default_popup: "src/ui/popup/index.html",
+  },
   background: {
     service_worker: "src/background/service-worker.js",
     type: "module",
   },
-  action: {
-    default_title: "Job Application Logger",
-    default_popup: "src/ui/popup/index.html",
+  options_ui: {
+    page: "src/ui/options/index.html",
+    open_in_tab: true,
   },
   permissions: ["contextMenus", "sidePanel", "storage", "tabs"],
   side_panel: {

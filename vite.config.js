@@ -13,6 +13,7 @@ export default defineConfig({
   build: {
     rollupOptions: {
       input: {
+        options: resolve(__dirname, "src/ui/options/index.html"),
         popup: resolve(__dirname, "src/ui/popup/index.html"),
         sidePanel: resolve(__dirname, "src/ui/side-panel/index.html"),
       },
