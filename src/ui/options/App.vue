@@ -1,6 +1,6 @@
 <script setup>
 import { ref } from "vue";
-import fieldAdder from "./components/field-adder.vue";
+import FieldAdder from "./components/field-adder/index.vue";
 import FieldsPreview from "./components/fields-preview.vue";
 import SpreadsheetFields from "./components/spreadsheet-fields.vue";
 
@@ -20,17 +20,17 @@ const updateFields = (newFields) => {
       <h1>Settings</h1>
       <hr></hr>
       <hgroup>
-        <h3>Included Fields</h3>
+        <h3>Field Settings</h3>
         <p>Dictate which fields are included and their order when logging a job application!</p>
       </hgroup>
       <article>
         <hgroup>
-          <h4>Manage Fields</h4>
-          <p>You can remove or reorder fields here!</p>
+          <h4>Manage</h4>
+          <p>You can add new or remove fields here! The fields themselves are draggable if you wish to reorder them!</p>
         </hgroup>
         <spreadsheet-fields :fields="exportFields" @update="updateFields" />
-        <field-adder />
-        <h4>Fields Preview</h4>
+        <field-adder :fields="exportFields" />
+        <h4>Preview</h4>
         <fields-preview :fields="exportFields" />
       </article>
     </section>
